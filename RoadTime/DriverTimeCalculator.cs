@@ -14,12 +14,10 @@ namespace RoadTime
             int remainder = totalTime % driveAndRestPeriod;
 
             int driveTime = quotient * maxDriveTime;
-            int restTime = quotient * minRestTime;
-
+            
             driveTime += Math.Min(remainder, maxDriveTime);
-            restTime += Math.Max(0, remainder - maxDriveTime);
 
-            return (driveTime, restTime);
+            return (driveTime, totalTime - driveTime);
         }
     }
 }
