@@ -10,6 +10,10 @@ namespace RoadTime
         {
             int driveAndRestPeriod = maxDriveTime + minRestTime;
 
+            //prevent divide by 0
+            if (driveAndRestPeriod == 0)
+                return (0, 0);
+
             int quotient = totalTime / driveAndRestPeriod;
             int remainder = totalTime % driveAndRestPeriod;
 

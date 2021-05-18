@@ -11,6 +11,7 @@ namespace DriverTimeUnitTestProject
         }
 
         [TestCase(0, 6, 4, 0, 0)]
+        [TestCase(1, 0, 0, 0, 0)]
         [TestCase(1, 6, 4, 1, 0)]
         [TestCase(8, 6, 4, 6, 2)]
         [TestCase(10, 6, 4, 6, 4)]
